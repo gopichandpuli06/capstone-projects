@@ -1,0 +1,29 @@
+<%- include("header.ejs") %>
+
+<h1 class="date">Work List</h1>
+
+
+<div class="container mt-3">
+    <form action="/work" method="post">
+        <% if(locals.message){ %>
+            <% for(let i=0;i<message.length;i++){ %>
+                <div class="task">
+                    <input class="checkbox" type="checkbox" name="completed[]" value="<%= i %>">
+                    <p class="table <%= message[i].completed ? 'completed' : '' %>">
+                        <%= message[i].text %>
+                    </p>
+                </div>
+                
+            <% } %>
+        <% } %>
+        <input class="btn-2" type="submit" value="Complete Selected Tasks">
+    </form>
+</div>
+
+
+<form class="center-form" action="/work" method="post">
+    <input class ="search" type="text" id="worktext" name="worktext" required></input>
+    <input class = "btn" type="submit" value="Submit">
+</form>
+
+<%- include("footer.ejs") %>

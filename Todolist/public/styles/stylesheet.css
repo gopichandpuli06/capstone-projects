@@ -1,0 +1,124 @@
+ul{
+    background-color: #9575cd;
+    min-height: 50px; /* Ensure a minimum height of 50px */
+    width: 100%;
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+
+body{
+    background-color: #e8eaf6;
+}
+
+ul.links li {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    margin-left: 15px;
+    color: white; /* Change the text color to white */
+}
+
+li a{
+    color: white;
+    font-size: 1rem;
+}
+
+@media(max-width: 768px){
+    ul{
+        width: 90%;
+        height: auto;
+    }
+}
+
+.date{
+    display: flex;
+    justify-content: center;  /* center the content horizantally */
+    align-items: center;      /* center the content vertically */
+    height: 80px;
+    width: 400px;
+    margin: 10px auto;
+    text-align: center;
+    font-size: 2rem;
+    background-color: #a683e3;
+    color: white;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.task{
+    display: flex;
+    justify-content: center;  /* center the content horizantally */
+    align-items: center;      /* center the content vertically */
+    height: 50px;
+    width: 400px;
+    margin: 10px auto;
+    text-align: center;
+    font-size: 1.5rem;
+    background-color: white;
+}
+
+.checkbox{
+    margin-left: 10px;
+}
+
+.table{
+    text-align: left;
+    display: flex;
+    justify-content: center;  /* center the content horizantally */
+    align-items: center;      /* center the content vertically */
+}
+
+.center-form{
+    display: flex;
+    justify-content: center;  /* center the content horizantally */
+    align-items: center;      /* center the content vertically */
+    height: 50px;
+    width: 400px;
+    margin: 10px auto;
+    text-align: center;
+    background-color: white;
+}
+
+.search{
+    font-size: 1.5rem;
+}
+
+.btn{
+    margin-left: 10px;
+    background-color: #a683e3;
+    color: white;
+}
+
+.btn-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #a683e3;
+    margin: 10px auto;
+    text-align: center;
+    color: white;
+    border: 10px solid #a683e3;
+    border-radius: 5px;
+}
+
+
+spam{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1rem;
+    font-style: italic;
+    color:black;
+    margin-top: 100px;
+    margin-bottom: 50px;
+
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #777;
+}
