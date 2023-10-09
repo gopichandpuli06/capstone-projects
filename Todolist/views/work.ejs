@@ -4,26 +4,27 @@
 
 
 <div class="container mt-3">
-    <form action="/work" method="post">
+    <form action="/work" method="post" class="task-form">
         <% if(locals.message){ %>
             <% for(let i=0;i<message.length;i++){ %>
                 <div class="task">
-                    <input class="checkbox" type="checkbox" name="completed[]" value="<%= i %>">
-                    <p class="table <%= message[i].completed ? 'completed' : '' %>">
-                        <%= message[i].text %>
-                    </p>
+                    <label class="table">
+                        <input type="checkbox" class="checkbox" data-index="<%= i %>" <%= message[i].completed ? 'checked' : '' %>>
+                        <span class="table" data-index="<%= i %>" <%= message[i].completed ? 'class="completed"' : '' %>><%= message[i].text %></span>
+                    </label>
                 </div>
                 
             <% } %>
         <% } %>
-        <input class="btn-2" type="submit" value="Complete Selected Tasks">
     </form>
 </div>
 
 
 <form class="center-form" action="/work" method="post">
-    <input class ="search" type="text" id="worktext" name="worktext" required></input>
+    <input class ="search" type="text" id="worktext" name="worktext" placeholder="To do list" required></input>
     <input class = "btn" type="submit" value="Submit">
 </form>
+
+<%- include("script.ejs")  %>
 
 <%- include("footer.ejs") %>

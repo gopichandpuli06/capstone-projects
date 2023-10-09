@@ -11,16 +11,8 @@ function addTodolist(req, res, next){
     console.log(lenth)
     if(req.body["text"]){
         todoList.push({text: req.body["text"], completed: false});
+        //todoList.push(req.body["text"]);
         req.body["text"] = "";
-    }
-
-    // Handle marking tasks as completed
-    if (Array.isArray(req.body.completed)) {
-        req.body.completed.forEach((index) => {
-            if (index >= 0 && index < todoList.length) {
-                todoList[index].completed = true;
-            }
-        });
     }
 
     console.log(todoList);
@@ -36,15 +28,7 @@ function workList(req, res, next){
         worktodoList.push({text: req.body["worktext"], completed: false});
         req.body["worktext"] = "";
     }
-    // Handle marking tasks as completed
-    if(Array.isArray(req.body.completed)){
-        req.body.completed.forEach((index) =>{
-            if(index >= 0 && index < worktodoList.length) {
-                worktodoList[index].completed = true;
-            }
-        });
-    }
-
+    
     console.log(worktodoList)
     next();
 }

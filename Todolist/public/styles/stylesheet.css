@@ -45,6 +45,8 @@ li a{
     color: white;
     margin-top: 50px;
     margin-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .task{
@@ -57,6 +59,8 @@ li a{
     text-align: center;
     font-size: 1.5rem;
     background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .checkbox{
@@ -68,6 +72,8 @@ li a{
     display: flex;
     justify-content: center;  /* center the content horizantally */
     align-items: center;      /* center the content vertically */
+    margin-top: 15px;
+    
 }
 
 .center-form{
@@ -79,16 +85,21 @@ li a{
     margin: 10px auto;
     text-align: center;
     background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .search{
     font-size: 1.5rem;
+    border-radius: 5px;
 }
 
 .btn{
     margin-left: 10px;
     background-color: #a683e3;
     color: white;
+    border-radius: 30px;
+    text-align: center;
 }
 
 .btn-2{
@@ -107,6 +118,7 @@ li a{
 
 spam{
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -119,6 +131,11 @@ spam{
 }
 
 .completed {
+    text-decoration: line-through;
+    color: #e2dddd;
+}
+
+p .test{
     text-decoration: line-through;
     color: #777;
 }

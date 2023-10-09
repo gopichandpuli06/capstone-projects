@@ -1,0 +1,18 @@
+<script>
+    const checkboxes = document.querySelectorAll('.checkbox');
+    console.log("hello!")
+    checkboxes.forEach((checkbox) => {
+        checkbox.addEventListener('change', function () {
+            const index = this.getAttribute('data-index');
+            const taskText = document.querySelector(`.table span[data-index="${index}"]`);
+            console.log(index)
+            console.log(taskText)
+            if (taskText.classList.contains('completed')) {
+                taskText.classList.remove('completed');
+                console.log("comp")
+            } else {
+                taskText.classList.add('completed');
+            }
+        });
+    });
+</script>
